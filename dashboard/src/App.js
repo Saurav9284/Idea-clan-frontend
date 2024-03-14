@@ -1,15 +1,11 @@
 import './App.css';
-import Login from './Pages/Login/Login';
 import { ChakraProvider } from '@chakra-ui/react'
-import SignupFirst from './Pages/Signup/SignupFirst';
-import SignupSecond from './Pages/Signup/SignupSecond';
+import Allroutes from './Allrouts/Allroutes';
 
 function App() {
   return (
     <ChakraProvider>
-      {/* <Login/> */}
-      {/* <SignupFirst/> */}
-      <SignupSecond/>
+      <Allroutes/>
     </ChakraProvider>
     
   );

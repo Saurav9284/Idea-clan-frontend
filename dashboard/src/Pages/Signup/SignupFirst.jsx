@@ -1,9 +1,13 @@
 import { FormControl, Input, Button, FormLabel, VStack, HStack } from '@chakra-ui/react';
 import { Box, Heading } from '@chakra-ui/layout';
 import { Progress } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 
 
 const SignupFirst = () => {
+
+  const navigate = useNavigate()
+
   return (
     
     <Box
@@ -39,7 +43,7 @@ const SignupFirst = () => {
           </FormControl>
         <HStack w='full' justify='space-between'>
         </HStack>
-        <Button rounded='none' colorScheme='blue' w='full'>
+        <Button rounded='none' colorScheme='blue' w='full' onClick={()=>navigate('/signup/step-2')}>
           Next
         </Button>
       </VStack>

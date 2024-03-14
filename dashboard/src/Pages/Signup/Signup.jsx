@@ -1,8 +1,10 @@
 import { FormControl, Input, Button, FormLabel, VStack, HStack, Select } from '@chakra-ui/react';
 import { Box, Heading } from '@chakra-ui/layout';
 import { Progress } from '@chakra-ui/react';
-
+import { useNavigate } from 'react-router-dom';
+import {ArrowBackIcon} from '@chakra-ui/icons'
 const Signup = () => {
+  const navigate = useNavigate()
   return (
     <Box
       w={['full', 'md']}
@@ -14,6 +16,7 @@ const Signup = () => {
       borderColor={['', 'gray.300']}
       borderRadius={10}
     >
+      <ArrowBackIcon w={8} h={8} mb={5} onClick={()=>navigate('/signup/step-2')} cursor='pointer'/>
       <Progress hasStripe value={100} size='sm'/>
       <VStack spacing={4} align='flex-start' w='full'>
         <VStack spacing={1} align={['flex-start', 'center']} w='full'>
@@ -34,7 +37,7 @@ const Signup = () => {
         <Button rounded='none' colorScheme='green' w='full'>
           Signup
         </Button>
-        <Button variant='link' colorScheme='blue' onClick={()=>navigate('/signup')}>
+        <Button variant='link' colorScheme='blue' onClick={()=>navigate('/login')}>
               Already have an account? Login
             </Button>
       </VStack>
